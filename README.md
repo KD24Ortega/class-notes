@@ -1,6 +1,6 @@
 # ClassNotes
 
-Aplicacion de notas de clase construida con Next.js 16, React 19, TipTap y Tailwind CSS.
+Aplicacion de notas de clase construida con Next.js 16, React 19, TipTap y Tailwind CSS, ChadCN.
 
 Las notas se guardan en `localStorage`, por lo que no necesita base de datos ni configuracion de variables de entorno para ejecutarse localmente.
 
