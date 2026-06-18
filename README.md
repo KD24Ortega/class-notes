@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ClassNotes
 
-## Getting Started
+Aplicacion de notas de clase construida con Next.js 16, React 19, TipTap y Tailwind CSS.
 
-First, run the development server:
+Las notas se guardan en `localStorage`, por lo que no necesita base de datos ni configuracion de variables de entorno para ejecutarse localmente.
+
+## Requisitos
+
+- Node.js 20.9 o superior
+- npm
+
+## Instalacion
+
+1. Clona este repositorio:
+
+```bash
+git clone <URL_DEL_REPO>
+```
+
+2. Entra a la carpeta del proyecto:
+
+```bash
+cd class-notes
+```
+
+3. Instala las dependencias:
+
+```bash
+npm install
+```
+
+## Ejecutar en desarrollo
+
+Inicia el servidor local con:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Luego abre:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Ejecutar en produccion
 
-## Learn More
+1. Genera el build:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Inicia la aplicacion:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run start
+```
 
-## Deploy on Vercel
+## Scripts disponibles
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `npm run dev`: inicia el servidor de desarrollo con Next.js.
+- `npm run build`: genera la version de produccion.
+- `npm run start`: ejecuta la app en modo produccion.
+- `npm run lint`: analiza el codigo con ESLint.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Estructura basica
+
+- `app/`: rutas y layout principal de Next.js.
+- `components/`: componentes de interfaz, incluido el editor de notas.
+- `lib/`: utilidades compartidas.
+- `public/`: archivos estaticos.
+
+## Notas
+
+- Si `npm run dev` falla, verifica primero tu version de Node.js con `node -v`.
+- Como las notas se guardan en el navegador, no apareceran automaticamente en otro equipo o navegador.
